@@ -10,7 +10,15 @@ body {
 .switch-container {
   background-color: #fff;
   padding: 4rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 0px 6px rgb(105, 105, 240),
+              25px -25px 0px -3px white,
+              25px -25px 0px 0px green,
+              45px -45px 0px -6px white,
+              45px -45px 0px 0px lightpink,
+              65px -65px 0px -6px white,
+              65px -65px 0px 0px lightsalmon;
+              
 }
 
 .switch-container h1 {
@@ -71,8 +79,19 @@ label {
 
 .checkbox:checked + .switch::before {
   margin-left: 54px;
+  animation-name: glowyBall;
+  animation-duration: 200ms;
 }
 
 .checkbox:checked + .switch:hover::before {
   box-shadow: 0 0 0px 3px rgba(105, 105, 240, 0.29);
+}
+
+@keyframes glowyBall {
+  from {
+    box-shadow: 0 0 0px 0px rgba(105, 105, 240, 0.29);
+  }
+  to {
+    box-shadow: 0 0 0px 4px rgba(105, 105, 240, 0.29);
+  }
 }
